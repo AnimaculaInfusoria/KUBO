@@ -2,9 +2,19 @@ from django.db import models
 
 from wagtail.core.models import Page
 from wagtail.admin.edit_handlers import FieldPanel, PageChooserPanel 
+from wagtail.images.edit_handlers import ImageChooserPanel 
 
 
 class HomePage(Page):
+    background_image = models.ForeignKey(
+        'wagtailimages.Image',
+        blank=False,
+        null=True,
+        related_name='+',
+        help_text='Header background image',
+        on_delete=models.SET_NULL,
+    )
+    
     hero_title = models.CharField(
         max_length=120,
         blank=True,
@@ -22,6 +32,8 @@ class HomePage(Page):
         FieldPanel("hero_subtitle"),
         FieldPanel("cta_btn_text"),
         PageChooserPanel("cta_btn_link"),
+        ImageChooserPanel("background_image"), 
+        
     ]
 
     cta_btn_text = models.CharField(

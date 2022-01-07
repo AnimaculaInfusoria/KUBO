@@ -11,11 +11,11 @@
                 <h1 class="display-4 my-auto text-center">{{ page.headline_text }}</h1>
             </div>
             {% for post in page.get_children %}
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 69,5rem;">
                 <div class="card-body">
                     <h5 class="card-title">{{ post.title }}</h5>
                     <p class="card-text">{{ post.specific.intro }}</p>
-                    <a href="{% pageurl post %}" class="btn btn-primary">Read Post</a>
+                    <a href="{% pageurl post %}" class="btn btn-primary">K článku</a>
                 </div>
             </div>
             {% empty %}
