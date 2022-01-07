@@ -3,6 +3,7 @@ from wagtail.images.edit_handlers import ImageChooserPanel
 from django.db import models
 
 from wagtail.core.models import Page
+from wagtail.core.fields import RichTextField
 
 
 class BlogListingPage(Page):
@@ -25,3 +26,16 @@ class BlogListingPage(Page):
         ImageChooserPanel("background_image"), 
         FieldPanel("headline_text")
         ]
+
+class BlogPage(Page):
+    date = models.DateField("Article Date")
+    intro = models.TextField("Introduction")
+    body = RichTextField(
+        blank=True,
+    )
+
+    content_panels = Page.content_panels + [
+        FieldPanel('date'),
+        FieldPanel('intro'),
+        FieldPanel('body', classname="full"),
+    ]
