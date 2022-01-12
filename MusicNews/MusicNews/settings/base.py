@@ -133,6 +133,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+#not fokin working------------------------------------------------------------------------------------------------------------------------
+#AUTH_USER_MODEL = 'users.CustomUser'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/

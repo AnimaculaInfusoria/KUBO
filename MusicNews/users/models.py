@@ -24,3 +24,8 @@ class AuthorProfile(models.Model):
 
     def __str__(self):
         return self.name
+
+# NOT FOKIN WORKING-----------------------------------------------------------------------------------------------------------
+
+#class CustomUser(AbstractUser):
+    #profile = models.OneToOneField(AuthorProfile, on_delete=models.CASCADE, null=True)
