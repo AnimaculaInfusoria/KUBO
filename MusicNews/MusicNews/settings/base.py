@@ -24,13 +24,19 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 # Application definition
 
 INSTALLED_APPS = [
-    'home',
-    'search',
-    'blog',
-    'contact',
-    'users',
+    # django
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'django.contrib.sites',
 
+    # kvoli custom user
+    'users.apps.UsersConfig',
 
+    # 3rd party
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
     'wagtail.embeds',
@@ -42,21 +48,17 @@ INSTALLED_APPS = [
     'wagtail.search',
     'wagtail.admin',
     'wagtail.core',
-
     'modelcluster',
     'taggit',
-
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'django.contrib.sites',
-
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+
+    # svoje
+    'home',
+    'search',
+    'blog',
+    'contact',
 ]
 
 SITE_ID = 1
@@ -134,7 +136,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 #not fokin working------------------------------------------------------------------------------------------------------------------------
-#AUTH_USER_MODEL = 'users.CustomUser'
+AUTH_USER_MODEL = 'users.CustomUser'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/

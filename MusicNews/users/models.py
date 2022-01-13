@@ -8,13 +8,13 @@ from wagtail.images.edit_handlers import ImageChooserPanel
 class AuthorProfile(models.Model):
     name = models.CharField(max_length=100)
     bio = models.CharField(max_length=250)
-    photo = models.ForeignKey(
-        'wagtailimages.Image',
-        null=True,
-        blank=True,
-        on_delete=models.SET_NULL,
-        related_name='+'
-    )
+    # photo = models.ForeignKey(
+    #     'wagtailimages.Image',
+    #     null=True,
+    #     blank=True,
+    #     on_delete=models.SET_NULL,
+    #     related_name='+'
+    # )
 
     panels = [
         FieldPanel('name'),
@@ -27,5 +27,5 @@ class AuthorProfile(models.Model):
 
 # NOT FOKIN WORKING-----------------------------------------------------------------------------------------------------------
 
-#class CustomUser(AbstractUser):
-    #profile = models.OneToOneField(AuthorProfile, on_delete=models.CASCADE, null=True)
+class CustomUser(AbstractUser):
+    profile = models.OneToOneField(AuthorProfile, on_delete=models.CASCADE, null=True)
