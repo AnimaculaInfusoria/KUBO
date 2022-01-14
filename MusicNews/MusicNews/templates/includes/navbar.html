@@ -20,6 +20,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'search' %}">Nájdi</a>
                 </li>
+                {% if user.is_authenticated %}
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/logout/">Odhlásiť ({{ user.username }})</a></li>
+                            {% else %}
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/login/">Prihlásiť</a></li>
+                {% endif %}
             </ul>
         </div>
     </div>

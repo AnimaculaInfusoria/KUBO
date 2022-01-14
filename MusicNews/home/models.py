@@ -51,3 +51,5 @@ class HomePage(Page):
         on_delete=models.SET_NULL,
         help_text="Internal page link to send the user to when clicking CTA button."
     )
+
+    
