@@ -12,7 +12,7 @@
             <div class="intro">{{ page.intro }}</div>
 
             {{ page.body|richtext }}
-
+            <h4>Napísal: {{ page.owner.profile.name }} {% image page.owner.profile.photo fill-50x50 %} </h4>
             <p><a href="{{ page.get_parent.url }}">Vrátiť sa</a></p>
         </div>
     </div>

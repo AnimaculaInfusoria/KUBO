@@ -34,6 +34,7 @@ class BlogPage(Page):
         blank=True,
     )
 
+
     content_panels = Page.content_panels + [
         FieldPanel('date'),
         FieldPanel('intro'),
