@@ -14,9 +14,9 @@ urlpatterns = [
     path('admin/', include(wagtailadmin_urls)),
     path('documents/', include(wagtaildocs_urls)),
     path('', include('allauth.urls')),
-    
-
     path('search/', search_views.search, name='search'),
+    path('polls/', include('polls.urls')),
+    path('api/polls/', include('polls.api_urls')),
 
 ]
 

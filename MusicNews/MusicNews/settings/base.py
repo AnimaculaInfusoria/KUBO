@@ -32,6 +32,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'rest_framework',
+    'django_extensions',
 
     # kvoli custom user
     'users.apps.UsersConfig',
@@ -60,6 +62,8 @@ INSTALLED_APPS = [
     'search',
     'blog',
     'contact',
+    'polls'
+    
 ]
 
 SITE_ID = 1
