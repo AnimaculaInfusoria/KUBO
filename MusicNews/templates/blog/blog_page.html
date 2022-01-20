@@ -8,9 +8,9 @@
         <div class="col">
             <h1>{{ page.title }}</h1>
             <p>{{ page.date }}</p>
-
-            <div class="intro">{{ page.intro }}</div>
-
+            {% image page.main_image fill-1200x400 %}
+            <div class="intro">{{ page.text}}</div>
+            
             {{ page.body|richtext }}
             <h4>Napísal: {{ page.owner.profile.name }} {% image page.owner.profile.photo fill-50x50 %} </h4>
             <p><a href="{{ page.get_parent.url }}">Vrátiť sa</a></p>
