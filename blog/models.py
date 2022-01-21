@@ -39,16 +39,14 @@ class BlogPage(Page):
         on_delete=models.SET_NULL,
         related_name='+'
     )
-    poll = models.ForeignKey(Question, on_delete=models.SET_NULL, null=True, related_name='+')
     text = StreamField([
         ('text_fill', blocks.RichTextBlock()),
         ('polls', blocks_polls.PollsBlock()),
     ], default=None)
 
-    # Editor panels configuration
+    
 
     content_panels = Page.content_panels + [
         ImageChooserPanel('main_image'),
         StreamFieldPanel('text'),
-        FieldPanel('owner'),
     ]
