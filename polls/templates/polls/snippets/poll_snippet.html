@@ -2,7 +2,7 @@
     
     {{ value.poll }} {% for choice in value.poll.choices.all %}
         <button
-          class="btn btn-danger vote-button"
+          class="btn btn-warning vote-button"
           data-poll="{{ value.poll.id }}"
           data-choice="{{ choice.id}}"
           type="submit">
