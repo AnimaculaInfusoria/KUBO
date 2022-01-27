@@ -1,0 +1,16 @@
+body.template-homepage{
+    background-color: black;
+    color: #ffc107;
+}
+
+.navbar-dark .navbar-brand {
+    color: #ffc107;
+}
+
+.bg-dark {
+    background-color: #000000!important;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+    color: #ffc107;
+}
