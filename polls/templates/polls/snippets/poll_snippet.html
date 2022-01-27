@@ -1,6 +1,14 @@
-<p>
-    {{ value.poll }}
-    <button type="button">Ujde</button>
-    <button type="button">Nahovno</button>
+<div class=" float-right poll-section" data-poll="{{value.poll.id}}">
+    
+    {{ value.poll }} {% for choice in value.poll.choices.all %}
+        <button
+          class="btn btn-primary vote-button"
+          data-poll="{{ value.poll.id }}"
+          data-choice="{{ choice.id}}"
+          type="submit">
+        
+          {{ choice.choice_text }}
+        </button>
 
-</p>
+    {% endfor %}
+  </div>

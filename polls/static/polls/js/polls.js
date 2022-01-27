@@ -44,3 +44,8 @@ $(".vote-button").on("click", function () {
     dataType: "json"
   });
 });
+
+
+
+
+
