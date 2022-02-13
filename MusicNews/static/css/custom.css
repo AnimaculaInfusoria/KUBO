@@ -1,3 +1,4 @@
+
 body.template-homepage{
     background-color: black;
     color: #ffc107;
@@ -11,7 +12,7 @@ body.template-homepage{
     background-color: #000000!important;
 }
 
-.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link, a {
     color: #ffc107;
 }
 
@@ -19,4 +20,19 @@ body.template-homepage{
     color: rgba(255,255,255,.5);
     border-color: #ffc107;
 }
+div.card{
+    margin-bottom: 0.5cm;
+}
+body{
+    background-color: rgb(0, 0, 0);
+}
 
+div.block-text_fill, h1{
+    color: rgb(194, 194, 194);
+}
+h1.display-4.my-auto.text-center{
+    display: none;
+}
+a:hover{
+    color: grey;
+}
